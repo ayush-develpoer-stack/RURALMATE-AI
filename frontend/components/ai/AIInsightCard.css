@@ -1,0 +1,26 @@
+.ai-insights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+.ai-insights__item {
+  flex: 1;
+  min-width: 84px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+}
+.ai-insights__value {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary-dark);
+  line-height: 1.1;
+}
+.ai-insights__label {
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+}

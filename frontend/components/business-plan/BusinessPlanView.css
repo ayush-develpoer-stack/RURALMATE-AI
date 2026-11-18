@@ -1,0 +1,184 @@
+.business-plan {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.business-plan__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+.business-plan__error {
+  color: var(--color-danger);
+  font-size: var(--fs-sm);
+}
+
+.business-plan__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.business-plan__toolbar-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.business-plan__toolbar-actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.business-plan__report {
+  padding: var(--space-8);
+}
+.business-plan__report-head {
+  text-align: center;
+  padding-bottom: var(--space-5);
+  border-bottom: 2px solid var(--color-primary-light);
+  margin-bottom: var(--space-6);
+}
+.business-plan__report-head h2 {
+  font-size: var(--fs-2xl);
+  color: var(--color-primary-dark);
+}
+.business-plan__report-head p {
+  color: var(--color-text-secondary);
+  margin-top: var(--space-2);
+}
+.business-plan__stamp {
+  display: inline-block;
+  margin-top: var(--space-3);
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.business-plan__sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.business-plan__section h3 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--fs-lg);
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+.business-plan__section-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+}
+.business-plan__section p {
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  padding-left: calc(26px + var(--space-3));
+}
+
+.business-plan__report-foot {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--fs-xs);
+  text-align: center;
+}
+
+.business-plan__next {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* History */
+.business-plan__history {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+.business-plan__history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-4);
+}
+.business-plan__history-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: flex-start;
+}
+.business-plan__history-item--active {
+  border: 1px solid var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+.business-plan__history-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--space-2);
+}
+.business-plan__history-date {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+.business-plan__history-title {
+  font-size: var(--fs-md);
+  color: var(--color-text);
+  line-height: var(--lh-tight);
+}
+.business-plan__history-sub {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+}
+.business-plan__history-actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: auto;
+}
+
+@media (max-width: 640px) {
+  .business-plan__report {
+    padding: var(--space-5);
+  }
+  .business-plan__section p {
+    padding-left: 0;
+  }
+}
+
+/* Print — export the report cleanly */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #business-plan-report,
+  #business-plan-report * {
+    visibility: visible;
+  }
+  #business-plan-report {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+  }
+}

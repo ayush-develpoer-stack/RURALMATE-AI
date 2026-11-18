@@ -1,0 +1,107 @@
+.aiassist {
+  padding: var(--space-10) 0;
+}
+.aiassist__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.aiassist__chat {
+  background: var(--gradient-dark);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.aiassist__msg {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+.aiassist__msg--user {
+  flex-direction: row-reverse;
+}
+.aiassist__avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  font-size: 1.1rem;
+}
+.aiassist__avatar--user {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+.aiassist__avatar--ai {
+  background: var(--gradient-primary);
+  color: #fff;
+}
+.aiassist__bubble {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+  max-width: 82%;
+}
+.aiassist__bubble--user {
+  background: rgba(255, 255, 255, 0.16);
+  color: #f2f7f4;
+  border-bottom-right-radius: var(--radius-sm);
+}
+.aiassist__bubble--ai {
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--color-text);
+  border-bottom-left-radius: var(--radius-sm);
+}
+.aiassist__bubble--ai strong {
+  color: var(--color-primary-dark);
+}
+
+.aiassist__eyebrow {
+  display: inline-block;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-accent-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-2);
+}
+.aiassist__title {
+  font-size: var(--fs-2xl);
+  letter-spacing: -0.01em;
+}
+.aiassist__desc {
+  margin-top: var(--space-3);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+}
+.aiassist__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+.aiassist__pills span {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  background: var(--color-surface-alt);
+  color: var(--color-text-secondary);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+}
+
+@media (max-width: 900px) {
+  .aiassist__grid {
+    grid-template-columns: 1fr;
+  }
+  .aiassist__chat {
+    order: -1;
+  }
+}

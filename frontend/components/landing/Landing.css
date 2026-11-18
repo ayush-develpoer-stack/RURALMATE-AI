@@ -1,0 +1,10 @@
+.landing {
+  min-height: 100vh;
+  background: var(--color-background);
+  overflow-x: hidden;
+}
+
+/* Offset anchor targets so sticky navbar doesn't cover section tops */
+.landing section[id] {
+  scroll-margin-top: 84px;
+}

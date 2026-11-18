@@ -1,0 +1,122 @@
+.finance {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.finance__form-title,
+.finance__section-title {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.finance__inline-icon {
+  color: var(--color-primary);
+}
+
+.finance__form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.finance__form-actions {
+  margin-top: var(--space-5);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.finance__error {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-danger);
+  font-weight: var(--fw-medium);
+}
+
+/* Scenario flow */
+.finance__flow {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.finance__flow-step {
+  flex: 1;
+  min-width: 120px;
+  background: var(--color-surface-alt);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.finance__flow-step--accent {
+  background: var(--color-primary-light);
+}
+.finance__flow-label {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+.finance__flow-value {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+}
+.finance__flow-op {
+  display: flex;
+  align-items: center;
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--color-text-muted);
+}
+.finance__net {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-weight: var(--fw-medium);
+  flex-wrap: wrap;
+}
+
+.finance__chart-note {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-4);
+  margin-top: calc(var(--space-2) * -1);
+}
+.finance__chart {
+  width: 100%;
+}
+
+.finance__disclaimer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-warning-light);
+  color: var(--color-warning);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+}
+
+.finance__next {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 640px) {
+  .finance__form-grid {
+    grid-template-columns: 1fr;
+  }
+  .finance__flow-op {
+    justify-content: center;
+  }
+}

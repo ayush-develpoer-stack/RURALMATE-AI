@@ -1,0 +1,32 @@
+.schemes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.schemes__disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  background: var(--color-secondary-light);
+  color: var(--color-secondary-dark);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+}
+.schemes__disclaimer svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.schemes__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.schemes__next {
+  display: flex;
+  justify-content: flex-end;
+}

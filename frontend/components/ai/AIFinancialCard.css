@@ -1,0 +1,29 @@
+.ai-financial {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+.ai-financial__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+}
+.ai-financial__label {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+.ai-financial__value {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+}
+@media (max-width: 480px) {
+  .ai-financial {
+    grid-template-columns: 1fr;
+  }
+}

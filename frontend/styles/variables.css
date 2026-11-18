@@ -1,0 +1,99 @@
+:root {
+  /* ===== Colors ===== */
+  --color-primary: #1f7a4d;
+  --color-primary-dark: #145c39;
+  --color-primary-light: #e6f4ec;
+  --color-primary-glow: rgba(31, 122, 77, 0.18);
+
+  --color-secondary: #2563eb;
+  --color-secondary-dark: #1d4ed8;
+  --color-secondary-light: #e8f0fe;
+
+  /* Accent (teal bridge between green & blue) */
+  --color-accent: #0d9488;
+  --color-accent-dark: #0f766e;
+  --color-accent-light: #d9f2ee;
+
+  --color-background: #f5f8f6;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f1f5f2;
+  --color-surface-soft: #eef4f0;
+  --color-ink: #0f1a14;
+
+  --color-text: #16211b;
+  --color-text-secondary: #4b5a52;
+  --color-text-muted: #8a978f;
+
+  --color-border: #e3e9e4;
+  --color-border-strong: #d0dad3;
+
+  --color-success: #1f9d55;
+  --color-success-light: #e5f6ec;
+  --color-warning: #d98a04;
+  --color-warning-light: #fdf3e0;
+  --color-danger: #dc3545;
+  --color-danger-light: #fbe9eb;
+  --color-info: #2563eb;
+
+  /* ===== Gradients ===== */
+  --gradient-primary: linear-gradient(135deg, #1f7a4d 0%, #2563eb 100%);
+  --gradient-brand: linear-gradient(120deg, #145c39 0%, #1f7a4d 42%, #0d9488 72%, #2563eb 100%);
+  --gradient-soft: linear-gradient(135deg, #e6f4ec 0%, #e8f0fe 100%);
+  --gradient-mint: linear-gradient(160deg, #f4faf6 0%, #eef4f0 100%);
+  --gradient-hero: radial-gradient(1200px 600px at 82% -8%, rgba(37, 99, 235, 0.14), transparent 60%),
+    radial-gradient(1000px 520px at -5% 0%, rgba(31, 122, 77, 0.16), transparent 55%),
+    radial-gradient(700px 500px at 60% 110%, rgba(13, 148, 136, 0.1), transparent 60%);
+  --gradient-dark: linear-gradient(150deg, #103a27 0%, #0f2a1e 55%, #0c1f33 100%);
+
+  /* ===== Typography ===== */
+  --font-sans: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: 1.75rem;
+  --fs-3xl: 2.25rem;
+  --fs-4xl: 3rem;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --lh-tight: 1.2;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+
+  /* ===== Spacing ===== */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2.5rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+
+  /* ===== Radius ===== */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+  /* ===== Shadows ===== */
+  --shadow-sm: 0 1px 2px rgba(22, 33, 27, 0.06);
+  --shadow-md: 0 4px 16px rgba(22, 33, 27, 0.08);
+  --shadow-lg: 0 12px 32px rgba(22, 33, 27, 0.12);
+  --shadow-glow: 0 8px 30px rgba(31, 122, 77, 0.18);
+
+  /* ===== Transitions ===== */
+  --transition-fast: 120ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 350ms ease;
+
+  /* ===== Layout ===== */
+  --sidebar-width: 248px;
+  --navbar-height: 60px;
+  --content-max: 1180px;
+}

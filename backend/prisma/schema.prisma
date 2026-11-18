@@ -1,0 +1,125 @@
+// RuralMate AI — Prisma schema (Supabase PostgreSQL)
+// Run: npx prisma generate  &&  npx prisma migrate dev
+// The app runs without a database too (in-memory fallback) so the demo never breaks.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  profile       EntrepreneurProfile?
+  analyses      BusinessAnalysis[]
+  financialPlans FinancialPlan[]
+  schemeMatches SchemeMatch[]
+  businessPlans BusinessPlan[]
+  products      Product[]
+}
+
+model EntrepreneurProfile {
+  id             String   @id @default(cuid())
+  businessStatus String
+  category       String
+  village        String?
+  town           String?
+  district       String?
+  state          String?
+  capital        Float
+  experience     String
+  goal           String
+  revenue        Float?
+  expenses       Float?
+  loans          Float?
+  products       String[]
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model BusinessAnalysis {
+  id                 String   @id @default(cuid())
+  recommendedBusiness String
+  feasibilityScore   Int
+  demandScore        Int
+  competitionScore   Int
+  accessibilityScore Int
+  capitalFitScore    Int
+  seasonalityScore   Int
+  confidenceScore    Int
+  reasons            String[]
+  createdAt          DateTime @default(now())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model FinancialPlan {
+  id              String   @id @default(cuid())
+  projectCost     Float
+  ownCapital      Float
+  fundingGap      Float
+  expectedRevenue Float
+  monthlyExpenses Float
+  monthlySurplus  Float
+  breakEven       Int?
+  emi             Float
+  createdAt       DateTime @default(now())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model SchemeMatch {
+  id                String   @id @default(cuid())
+  schemeName        String
+  matchScore        Int
+  whyMatch          String[]
+  eligibilitySummary String[]
+  documents         String[]
+  supportDetails    String
+  officialSource    String
+  createdAt         DateTime @default(now())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model BusinessPlan {
+  id        String   @id @default(cuid())
+  title     String
+  subtitle  String?
+  content   Json
+  createdAt DateTime @default(now())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Product {
+  id                 String   @id @default(cuid())
+  productName        String
+  category           String
+  description        String
+  tags               String[]
+  suggestedPrice     String
+  imageUrl           String?
+  marketOpportunities Json?
+  createdAt          DateTime @default(now())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
