@@ -1,0 +1,18 @@
+{
+  "name": "ruralmate-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RuralMate AI - AI-powered hyper-local business decision and growth platform for rural micro-entrepreneurs (SIH 2026)",
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"green,cyan\" \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build",
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "start:backend": "npm --prefix backend run start",
+    "start:frontend": "npm --prefix frontend run start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
